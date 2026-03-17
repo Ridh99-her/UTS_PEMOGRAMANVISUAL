@@ -1,24 +1,48 @@
 ﻿Public Class Form3
-    ' 1. Tombol Kembali
-    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
-        Form2.Show()
-        Me.Close()
-    End Sub
-
-    ' 2. Tombol Keluar
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Application.Exit()
-    End Sub
-
-    ' 3. Event Load
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+
+            If picLogo.Image IsNot Nothing Then
+                picLogo.Image = SetOpacity(picLogo.Image, 0.3)
+            End If
+
+
+            AturTransparan(lblKementrian)
+            AturTransparan(lblUniv)
+            AturTransparan(lblIjazah)
+            AturTransparan(lblNama)
+            AturTransparan(lblNIM)
+            AturTransparan(lblProdi)
+            AturTransparan(lblAngkatan)
+            AturTransparan(lblTanggal)
+            AturTransparan(lblPredikat)
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
-    ' 4. Label Angkatan (Jika tidak sengaja ter-klik, biarkan saja atau hapus)
-    Private Sub lblAngkatan_Click(sender As Object, e As EventArgs) Handles lblAngkatan.Click
+
+    Private Sub AturTransparan(ByVal lbl As Label)
+        Try
+            lbl.Parent = picLogo
+            lbl.BackColor = Color.Transparent
+        Catch
+
+        End Try
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
-    End Sub
-End Class ' <-- Pastikan End Class berada di baris baru sendiri
+    Private Function SetOpacity(ByVal img As Image, ByVal opacity As Single) As Image
+        Dim bmp As New Bitmap(img.Width, img.Height)
+        Using g As Graphics = Graphics.FromImage(bmp)
+            Dim matrix As New Drawing.Imaging.ColorMatrix()
+            matrix.Matrix33 = opacity
+            Dim attributes As New Drawing.Imaging.ImageAttributes()
+            attributes.SetColorMatrix(matrix, Drawing.Imaging.ColorMatrixFlag.Default, Drawing.Imaging.ColorAdjustType.Bitmap)
+            g.DrawImage(img, New Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, attributes)
+        End Using
+        Return bmp
+    End Function
+
+End Class

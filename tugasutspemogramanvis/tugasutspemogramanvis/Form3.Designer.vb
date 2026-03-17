@@ -23,35 +23,133 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
-        Panel1 = New Panel()
-        btnExit = New Button()
-        btnKembali = New Button()
-        lblPredikat = New Label()
-        lblAngkatan = New Label()
-        lblProdi = New Label()
-        lblNIM = New Label()
+        picLogo = New PictureBox()
+        lblUniv = New Label()
+        lblIjazah = New Label()
         lblNama = New Label()
-        Label2 = New Label()
-        Label1 = New Label()
-        PictureBox1 = New PictureBox()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
+        lblNIM = New Label()
+        lblProdi = New Label()
+        lblAngkatan = New Label()
+        lblPredikat = New Label()
+        btnKembali = New Button()
+        btnExit = New Button()
+        Panel1 = New Panel()
+        lblKementrian = New Label()
+        lblTanggal = New Label()
+        CType(picLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' picLogo
+        ' 
+        picLogo.BackColor = Color.Transparent
+        picLogo.Image = CType(resources.GetObject("picLogo.Image"), Image)
+        picLogo.Location = New Point(-43, -26)
+        picLogo.Name = "picLogo"
+        picLogo.Size = New Size(805, 449)
+        picLogo.SizeMode = PictureBoxSizeMode.Zoom
+        picLogo.TabIndex = 0
+        picLogo.TabStop = False
+        ' 
+        ' lblUniv
+        ' 
+        lblUniv.BackColor = Color.Transparent
+        lblUniv.Font = New Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUniv.Location = New Point(228, 95)
+        lblUniv.Name = "lblUniv"
+        lblUniv.Size = New Size(311, 24)
+        lblUniv.TabIndex = 1
+        lblUniv.Text = "UNIVERSITAS MULAWARMAN"
+        ' 
+        ' lblIjazah
+        ' 
+        lblIjazah.AutoSize = True
+        lblIjazah.BackColor = Color.Transparent
+        lblIjazah.Font = New Font("Times New Roman", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblIjazah.Location = New Point(327, 119)
+        lblIjazah.Name = "lblIjazah"
+        lblIjazah.Size = New Size(119, 32)
+        lblIjazah.TabIndex = 2
+        lblIjazah.Text = "IJAZAH"
+        ' 
+        ' lblNama
+        ' 
+        lblNama.BackColor = Color.Transparent
+        lblNama.Font = New Font("Times New Roman", 18F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
+        lblNama.Location = New Point(299, 168)
+        lblNama.Name = "lblNama"
+        lblNama.Size = New Size(167, 26)
+        lblNama.TabIndex = 3
+        lblNama.Text = "Label3"
+        lblNama.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblNIM
+        ' 
+        lblNIM.BackColor = Color.Transparent
+        lblNIM.Font = New Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblNIM.Location = New Point(274, 194)
+        lblNIM.Name = "lblNIM"
+        lblNIM.Size = New Size(220, 24)
+        lblNIM.TabIndex = 4
+        lblNIM.Text = "Label4"
+        lblNIM.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblProdi
+        ' 
+        lblProdi.AutoSize = True
+        lblProdi.BackColor = Color.Transparent
+        lblProdi.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblProdi.Location = New Point(336, 218)
+        lblProdi.Name = "lblProdi"
+        lblProdi.Size = New Size(83, 26)
+        lblProdi.TabIndex = 5
+        lblProdi.Text = "Label5"
+        ' 
+        ' lblAngkatan
+        ' 
+        lblAngkatan.AutoSize = True
+        lblAngkatan.BackColor = Color.Transparent
+        lblAngkatan.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAngkatan.Location = New Point(336, 267)
+        lblAngkatan.Name = "lblAngkatan"
+        lblAngkatan.Size = New Size(83, 26)
+        lblAngkatan.TabIndex = 6
+        lblAngkatan.Text = "Label6"
+        ' 
+        ' lblPredikat
+        ' 
+        lblPredikat.BackColor = Color.Transparent
+        lblPredikat.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPredikat.Location = New Point(77, 330)
+        lblPredikat.Name = "lblPredikat"
+        lblPredikat.Size = New Size(799, 73)
+        lblPredikat.TabIndex = 7
+        lblPredikat.Text = "Label7"
+        ' 
+        ' btnKembali
+        ' 
+        btnKembali.Location = New Point(698, 168)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(75, 23)
+        btnKembali.TabIndex = 8
+        btnKembali.Text = "Kembali"
+        btnKembali.UseVisualStyleBackColor = True
+        ' 
+        ' btnExit
+        ' 
+        btnExit.Location = New Point(698, 139)
+        btnExit.Name = "btnExit"
+        btnExit.Size = New Size(75, 23)
+        btnExit.TabIndex = 9
+        btnExit.Text = "Keluar"
+        btnExit.UseVisualStyleBackColor = True
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.DarkOliveGreen
+        Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(Label6)
-        Panel1.Controls.Add(Label5)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(lblKementrian)
+        Panel1.Controls.Add(lblTanggal)
         Panel1.Controls.Add(btnExit)
         Panel1.Controls.Add(btnKembali)
         Panel1.Controls.Add(lblPredikat)
@@ -59,161 +157,34 @@ Partial Class Form3
         Panel1.Controls.Add(lblProdi)
         Panel1.Controls.Add(lblNIM)
         Panel1.Controls.Add(lblNama)
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(lblIjazah)
+        Panel1.Controls.Add(lblUniv)
+        Panel1.Controls.Add(picLogo)
         Panel1.Location = New Point(2, 1)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(799, 447)
+        Panel1.Size = New Size(799, 500)
         Panel1.TabIndex = 0
         ' 
-        ' btnExit
+        ' lblKementrian
         ' 
-        btnExit.Location = New Point(710, 413)
-        btnExit.Name = "btnExit"
-        btnExit.Size = New Size(75, 23)
-        btnExit.TabIndex = 9
-        btnExit.Text = "Keluar"
-        btnExit.UseVisualStyleBackColor = True
+        lblKementrian.AutoSize = True
+        lblKementrian.Font = New Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblKementrian.Location = New Point(228, 71)
+        lblKementrian.Name = "lblKementrian"
+        lblKementrian.Size = New Size(293, 24)
+        lblKementrian.TabIndex = 12
+        lblKementrian.Text = "KEMENTRIAN PENDIDIKAN"
         ' 
-        ' btnKembali
+        ' lblTanggal
         ' 
-        btnKembali.Location = New Point(629, 413)
-        btnKembali.Name = "btnKembali"
-        btnKembali.Size = New Size(75, 23)
-        btnKembali.TabIndex = 8
-        btnKembali.Text = "Kembali"
-        btnKembali.UseVisualStyleBackColor = True
-        ' 
-        ' lblPredikat
-        ' 
-        lblPredikat.AutoSize = True
-        lblPredikat.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPredikat.Location = New Point(355, 410)
-        lblPredikat.Name = "lblPredikat"
-        lblPredikat.Size = New Size(83, 26)
-        lblPredikat.TabIndex = 7
-        lblPredikat.Text = "Label7"
-        ' 
-        ' lblAngkatan
-        ' 
-        lblAngkatan.AutoSize = True
-        lblAngkatan.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblAngkatan.Location = New Point(355, 380)
-        lblAngkatan.Name = "lblAngkatan"
-        lblAngkatan.Size = New Size(83, 26)
-        lblAngkatan.TabIndex = 6
-        lblAngkatan.Text = "Label6"
-        ' 
-        ' lblProdi
-        ' 
-        lblProdi.AutoSize = True
-        lblProdi.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblProdi.Location = New Point(355, 354)
-        lblProdi.Name = "lblProdi"
-        lblProdi.Size = New Size(83, 26)
-        lblProdi.TabIndex = 5
-        lblProdi.Text = "Label5"
-        ' 
-        ' lblNIM
-        ' 
-        lblNIM.AutoSize = True
-        lblNIM.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblNIM.Location = New Point(355, 328)
-        lblNIM.Name = "lblNIM"
-        lblNIM.Size = New Size(83, 26)
-        lblNIM.TabIndex = 4
-        lblNIM.Text = "Label4"
-        ' 
-        ' lblNama
-        ' 
-        lblNama.AutoSize = True
-        lblNama.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblNama.Location = New Point(355, 291)
-        lblNama.Name = "lblNama"
-        lblNama.Size = New Size(83, 26)
-        lblNama.TabIndex = 3
-        lblNama.Text = "Label3"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Times New Roman", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(345, 51)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(119, 32)
-        Label2.TabIndex = 2
-        Label2.Text = "IJAZAH"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(257, 18)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(311, 24)
-        Label1.TabIndex = 1
-        Label1.Text = "UNIVERSITAS MULAWARMAN"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(283, 86)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(225, 184)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(147, 291)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(194, 27)
-        Label3.TabIndex = 10
-        Label3.Text = "Nama Mahasiswa :"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(147, 328)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(197, 27)
-        Label4.TabIndex = 11
-        Label4.Text = "Nim                       :"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(144, 355)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(202, 27)
-        Label5.TabIndex = 12
-        Label5.Text = "Prodi                      :"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(144, 382)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(201, 27)
-        Label6.TabIndex = 13
-        Label6.Text = "Angkatan               :"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(143, 410)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(201, 27)
-        Label7.TabIndex = 14
-        Label7.Text = "Predikat                 :"
+        lblTanggal.BackColor = Color.Transparent
+        lblTanggal.Font = New Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTanggal.Location = New Point(256, 244)
+        lblTanggal.Name = "lblTanggal"
+        lblTanggal.Size = New Size(517, 23)
+        lblTanggal.TabIndex = 11
+        lblTanggal.Text = "Lulus pada tanggal : "
+        lblTanggal.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Form3
         ' 
@@ -221,28 +192,26 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Form3"
         Text = "Form3"
+        CType(picLogo, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblPredikat As Label
-    Friend WithEvents lblAngkatan As Label
-    Friend WithEvents lblProdi As Label
-    Friend WithEvents lblNIM As Label
+    Friend WithEvents picLogo As PictureBox
+    Friend WithEvents lblUniv As Label
+    Friend WithEvents lblIjazah As Label
     Friend WithEvents lblNama As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnExit As Button
+    Friend WithEvents lblNIM As Label
+    Friend WithEvents lblProdi As Label
+    Friend WithEvents lblAngkatan As Label
+    Friend WithEvents lblPredikat As Label
     Friend WithEvents btnKembali As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents btnExit As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblTanggal As Label
+    Friend WithEvents lblKementrian As Label
 End Class

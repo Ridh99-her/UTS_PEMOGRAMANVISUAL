@@ -1,30 +1,41 @@
 ﻿Public Class Form2
-    ' Kodingan untuk tombol Cetak
     Private Sub btnCetak_Click(sender As Object, e As EventArgs) Handles btnCetak.Click
-        ' 1. Sinkronisasi data ke Form 3
-        Form3.lblNama.Text = txtNama.Text & ", S.Kom."
-        Form3.lblNIM.Text = txtNIM.Text
-
-        ' --- TAMBAHKAN DUA BARIS INI ---
+        ' Kirim Data Identitas
+        Form3.lblNama.Text = txtNama.Text.ToUpper
+        Form3.lblNIM.Text = "NIM : " & txtNIM.Text
         Form3.lblProdi.Text = txtProdi.Text
-        Form3.lblAngkatan.Text = txtAngkatan.Text
-        ' -------------------------------
+        Form3.lblAngkatan.Text = "Angkatan : " & txtAngkatan.Text
 
-        ' 2. Logika Predikat (Instruksi UTS)
+        ' LOGIKA PREDIKAT (2 Baris)
         Dim ipk As Double = Val(txtIPK.Text)
-        If ipk > 3.5 Then
-            Form3.lblPredikat.Text = "CUMLAUDE"
+        Dim gelar As String = "LULUS DENGAN GELAR SARJANA KOMPUTER (S.KOM)"
+
+        ' vbCrLf fungsinya seperti menekan tombol ENTER
+        If ipk >= 3.51 Then
+            Form3.lblPredikat.Text = gelar & vbCrLf & "(DENGAN PUJIAN / CUMLAUDE)"
+        ElseIf ipk >= 3.0 Then
+            Form3.lblPredikat.Text = gelar & vbCrLf & "(SANGAT MEMUASKAN)"
         Else
-            Form3.lblPredikat.Text = "SANGAT MEMUASKAN"
+            Form3.lblPredikat.Text = gelar & vbCrLf & "(MEMUASKAN)"
         End If
 
-        ' 3. Pindah Form
+        Form3.lblTanggal.Text = "Lulus pada tanggal : 21 Maret 2021"
+
         Form3.Show()
         Me.Hide()
     End Sub
 
-    ' Bagian ini biarkan saja atau hapus jika tidak digunakan
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' Tombol Kembali (Pastikan nama tombol di design adalah btnKembali)
+    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
+        Form1.Show()
+        Me.Close()
     End Sub
 
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtProdi.Items.Clear()
+        txtProdi.Items.Add("Informatika")
+        txtProdi.Items.Add("Multimedia")
+        txtProdi.Items.Add("Desain Digital")
+        If txtProdi.Items.Count > 0 Then txtProdi.SelectedIndex = 0
+    End Sub
 End Class
